@@ -1,0 +1,152 @@
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body {
+  background: #746958 url(../images/wood.svg) center/cover no-repeat;
+  font-family: helvetica, arial, sans-serif;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  -webkit-touch-callout: none;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8vh;
+  background: #928776;
+  border-bottom: 2px #222 solid;
+}
+header h1 { /* Score */
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  margin: 0 5px;
+  color: #fff;
+  font-size: 6vh;
+  line-height: 8vh;
+}
+header div { /* Lives */
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  height: 100%;
+}
+header div img { /* Hearts */
+  width: 5vh;
+  height: 5vh;
+  margin: 1.5vh 0;
+}
+
+main img:first-child { /* Cat */
+  position: absolute;
+  width: 75px;
+  height: 75px;
+}
+main img:not(:first-child) { /* Mice */
+  position: absolute;
+  width: 40px;
+  height: 25px;
+}
+
+body>div:not(:last-of-type) { /* Popups */
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  left: calc(50% - 40vmin);
+  width: 80vmin;
+  padding: 4vmin;
+  background: #fff;
+  border: 1.5vmin #222 solid;
+  border-radius: 5vmin;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+body>div:nth-of-type(1) {
+  top: calc(50% - 35vmin);
+  height: 70vmin;
+}
+body>div:nth-of-type(2) {
+  top: calc(50% - 32vmin);
+  height: 64vmin;
+}
+body>div:nth-of-type(3) {
+  top: calc(50% - 29vmin);
+  height: 58vmin;
+}
+body>div:nth-of-type(4) {
+  top: calc(50% - 24vmin);
+  height: 48vmin;
+}
+body>div div:nth-child(1) {
+  margin-bottom: 4vmin;
+  font-size: 8vmin;
+}
+body>div:nth-of-type(2) div:nth-child(1),
+body>div:nth-of-type(3) div:nth-child(1) {
+  margin-bottom: 2vmin;
+}
+body>div:nth-of-type(4) div:nth-child(1) {
+  margin-bottom: 1vmin;
+}
+body>div:nth-of-type(1) div:not(:nth-child(1)),
+body>div:nth-of-type(2) div:not(:nth-child(1)),
+body>div:nth-of-type(3) div:nth-child(3),
+body>div:nth-of-type(4) div:nth-child(4) {
+  margin: 2vmin 0;
+  padding: 2vmin;
+  border: 1vmin #222 solid;
+  font-size: 5vmin;
+}
+body>div:nth-of-type(1) div:not(:nth-child(1)):active,
+body>div:nth-of-type(2) div:not(:nth-child(1)):active,
+body>div:nth-of-type(3) div:nth-child(3):active,
+body>div:nth-of-type(4) div:nth-child(4):active {
+  background: #222;
+  color: #fff;
+}
+body>div:nth-of-type(1) div:nth-child(2) {
+  padding: 5vmin 2vmin;
+  font-size: 15vmin;
+}
+body>div:nth-of-type(3) div:nth-child(2) {
+  font-size: 4vmin;
+  text-align: justify;
+  text-align-last: center;
+}
+body>div:nth-of-type(4) div:nth-child(2) {
+  font-size: 4vmin;
+}
+body>div:nth-of-type(4) div:nth-child(3) {
+  font-size: 5vmin;
+}
+
+body>div:last-of-type {
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 30vh 0;
+  color: #fff;
+  font-size: 20vh;
+  font-weight: bold;
+  line-height: 20vh;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media screen and (orientation: landscape) and (max-height: 450px) {
+  body>* { display: none }
+  body>div:last-of-type { display: block }
+}
