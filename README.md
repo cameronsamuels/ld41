@@ -25,9 +25,8 @@ The reason I kept this idea was because I have two cats myself, and they mean so
 - [Vectorizer](https://vectorizer.io) - photo vectorizing
 
 ## Links
-[Game (web)](https://cameronsamuels.com/ld41) - The playable online game
 <br>[Ludum Dare entry](https://goo.gl/KRiQj2) - The original LD submission
 
 ## Legal
-This game is licensed under the [Cameron Samuels License](LICENSE).
+This game is licensed under the [MIT License](LICENSE).
 Please use this software correctly under the terms of the license.
